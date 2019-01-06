@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user',
@@ -7,28 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  public users = [
-    {
-      id: '1',
-      firstName: 'Unmay',
-      lastName: 'Chaudhari',
-      updatedAt: '22-12-2018',
-      createdAt: '22-03-2018',
-    },
-    {
-      id: '1',
-      firstName: 'Kiyansh',
-      lastName: 'Chaudhari',
-      updatedAt: '22-12-2018',
-      createdAt: '22-03-2018'
-    }
-  ];
+  public users = [];
 
   public displayedColumns = [ 'id', 'firstName', 'lastName', 'updatedAt', 'createdAt', 'actions' ];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get('http://localhost:3000/users').subscribe((res: any) => {
+      this.users = res;
+    });
   }
 
 }

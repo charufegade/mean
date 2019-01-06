@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-task',
@@ -7,28 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskComponent implements OnInit {
 
-  public tasks = [
-    {
-      id: '1',
-      name: 'task1',
-      dueAt: '12-dec-2018',
-      assignedTo: 'John Doe',
-      isCompleted: false,
-    },
-    {
-      id: '2',
-      name: 'task2',
-      dueAt: '14-dec-2018',
-      assignedTo: 'Jen Doe',
-      isCompleted: true
-    }
-  ];
+  public tasks = [];
 
-  public displayedColumns = ['id', 'name', 'dueAt', 'assignedTo', 'isCompleted', 'actions' ];
+  public displayedColumns = ['id', 'name', 'dueAt', 'assignedTo', 'isCompleted', 'actions'];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get('http://localhost:3000/tasks').subscribe((res: any[]) => {
+      this.tasks = res;
+    });
   }
 
 }

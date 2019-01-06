@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-form',
@@ -12,7 +13,7 @@ export class UserFormComponent implements OnInit {
 
   public user: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     if (this.id) {
@@ -24,7 +25,9 @@ export class UserFormComponent implements OnInit {
   }
 
   onSubmitHandler() {
-    // Update user in database
+    this.http.post('http://localhost:3000/users', this.user).subscribe((res: any) => {
+    console.log(res);
+    });
     console.log('form submited');
   }
 
