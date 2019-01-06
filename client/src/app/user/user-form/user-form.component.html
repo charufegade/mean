@@ -1,3 +1,52 @@
-<p>
-  user-form works!
-</p>
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell">
+      <h2 class="mdc-typography--headline5" style="margin-top:0;">{{ id ? 'Edit' : 'Add' }} User</h2>
+    </div>
+  </div>
+{{user | json}}
+  <form>
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-3">
+        <mdc-form-field>
+          <mdc-text-field name="firstName" label="First Name" outlined style="width:100%;" required [(ngModel)]="user.firstName"></mdc-text-field>
+        </mdc-form-field>
+      </div>
+
+      <div class="mdc-layout-grid__cell--span-3">
+        <mdc-form-field>
+          <mdc-text-field name="lastName" label="Last Name" outlined style="width:100%;"
+            required [(ngModel)]="user.lastName"></mdc-text-field>
+        </mdc-form-field>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-3">
+        <mdc-form-field>
+          <mdc-text-field name="email" label="Email" type="email" outlined
+            style="width:100%;" required [(ngModel)]="user.email"></mdc-text-field>
+        </mdc-form-field>
+      </div>
+
+      <div class="mdc-layout-grid__cell--span-3">
+        <mdc-form-field>
+          <mdc-text-field name="dueAt" label="Due At" [(ngModel)]="user.dueAt" type="date" outlined style="width:100%;"></mdc-text-field>
+        </mdc-form-field>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-3">
+        <mdc-form-field>
+          <button mdc-button outlined (click)="onSubmitHandler()">Submit</button>
+        </mdc-form-field>
+      </div>
+    </div>
+
+  </form>
+</div>

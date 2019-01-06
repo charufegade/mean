@@ -1,3 +1,51 @@
-<p>
-  task-add works!
-</p>
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell">
+      <h2 class="mdc-typography--headline5" style="margin-top:0;">Add Tasks</h2>
+    </div>
+  </div>
+
+  <form #demoWeightForm="ngForm" id="demoWeightForm" (ngSubmit)="submit(demoWeightForm)">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-3">
+        <mdc-form-field>
+          <mdc-text-field formControlName="name" label="Name" outlined [errorStateMatcher]="matcher" style="width:100%;" required>
+          </mdc-text-field>
+        </mdc-form-field>
+      </div>
+
+      <div class="mdc-layout-grid__cell--span-3">
+          <mdc-form-field>
+            <mdc-text-field formControlName="assign" label="Assigned To" outlined [errorStateMatcher]="matcher" style="width:100%;" required></mdc-text-field>
+          </mdc-form-field>
+      </div>
+
+    </div>
+
+    <br>
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-3">
+        <mdc-form-field>
+          <mdc-textarea #comments label="Description" cols="40" required [helperText]="commentsHelper">
+          </mdc-textarea>
+        </mdc-form-field>
+      </div>
+
+      <div class="mdc-layout-grid__cell--span-3" >
+          <mdc-form-field>
+            <mdc-text-field type="date" label="Due At" outlined style="width:100%;"></mdc-text-field>
+          </mdc-form-field>
+        </div>
+
+    </div>
+
+    <br>
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell" >
+        <mdc-form-field>
+        <button mdc-button type="submit" outlined >Submit</button>
+      </mdc-form-field>
+      </div>
+    </div>
+  </form>
+</div>

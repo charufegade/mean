@@ -1,9 +1,29 @@
 import { NgModule } from '@angular/core';
-import { MdcTopAppBarModule } from '@angular-mdc/web';
+import {
+  MdcTopAppBarModule,
+  MdcMenuModule,
+  MdcCardModule,
+  MdcButtonModule,
+  MdcElevationModule,
+  MdcFormFieldModule,
+  MdcTextFieldModule
+} from '@angular-mdc/web';
+
+import {
+  MatTableModule
+} from '@angular/material';
 
 @NgModule({
   exports: [
-    MdcTopAppBarModule
+    MdcTopAppBarModule,
+    MdcCardModule,
+    MdcMenuModule,
+    MdcButtonModule,
+    MdcElevationModule,
+    MdcFormFieldModule,
+    MdcTextFieldModule,
+
+    MatTableModule
   ],
 })
 export class MaterialModule { }

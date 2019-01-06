@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-form',
@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserFormComponent implements OnInit {
 
+  @Input()
+  public id: string;
+
+  public user: any;
+
   constructor() { }
 
   ngOnInit() {
+    if (this.id) {
+      // fetch user from database
+      this.user = {};
+    } else {
+      this.user = {};
+    }
+  }
+
+  onSubmitHandler() {
+    // Update user in database
+    console.log('form submited');
   }
 
 }

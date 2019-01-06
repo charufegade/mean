@@ -112,6 +112,14 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/cdk@~7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.2.0.tgz#03bfbbcd5882fbdab71e6d5b5f36b612589724b4"
+  dependencies:
+    tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~7.1.4":
   version "7.1.4"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-7.1.4.tgz#f07ee4e979ec202bf2fd91a665e3d2d6c065bbe1"
@@ -169,6 +177,12 @@
 "@angular/language-service@~7.1.0":
   version "7.1.4"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-7.1.4.tgz#59303e719937f774d9266a5e5f498ba254e0fe7b"
+
+"@angular/material@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.2.0.tgz#35088eacf27645c9f01f054caf4011318db6e0f4"
+  dependencies:
+    tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@~7.1.0":
   version "7.1.4"
@@ -265,6 +279,92 @@
     esutils "^2.0.2"
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
+
+"@material/animation@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@material/animation/-/animation-0.41.0.tgz#315b45b32e1aeebee8a4cf555b8ad52076d09ddd"
+
+"@material/base@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@material/base/-/base-0.41.0.tgz#badadce711b4c25b1eb889a5e7581e32cd07c421"
+
+"@material/card@^0.42.0":
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.42.0.tgz#8e8c4674167f15c8abd895524c74496c0e1e503c"
+  dependencies:
+    "@material/elevation" "^0.41.0"
+    "@material/ripple" "^0.42.0"
+    "@material/rtl" "^0.42.0"
+    "@material/shape" "^0.42.0"
+    "@material/theme" "^0.41.0"
+
+"@material/dom@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@material/dom/-/dom-0.41.0.tgz#6756865f97bad4c91ee75e69d769d7cdc25398ae"
+
+"@material/elevation@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.41.0.tgz#db6b75ea43354fe35936cba2d78c55390faf4e9e"
+  dependencies:
+    "@material/animation" "^0.41.0"
+    "@material/theme" "^0.41.0"
+
+"@material/list@^0.42.0":
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/@material/list/-/list-0.42.0.tgz#7bf19c09f223c31b9bae6969361939e3cf8cea48"
+  dependencies:
+    "@material/base" "^0.41.0"
+    "@material/dom" "^0.41.0"
+    "@material/ripple" "^0.42.0"
+    "@material/rtl" "^0.42.0"
+    "@material/shape" "^0.42.0"
+    "@material/theme" "^0.41.0"
+    "@material/typography" "^0.42.0"
+
+"@material/menu-surface@^0.42.1":
+  version "0.42.1"
+  resolved "https://registry.yarnpkg.com/@material/menu-surface/-/menu-surface-0.42.1.tgz#41d5b11023f7d6e1a7b225fed1182f131b261081"
+  dependencies:
+    "@material/animation" "^0.41.0"
+    "@material/base" "^0.41.0"
+    "@material/elevation" "^0.41.0"
+    "@material/rtl" "^0.42.0"
+    "@material/shape" "^0.42.0"
+    "@material/theme" "^0.41.0"
+
+"@material/menu@^0.42.1":
+  version "0.42.1"
+  resolved "https://registry.yarnpkg.com/@material/menu/-/menu-0.42.1.tgz#7e21c278c5d8fc148413200309450b61df105b0f"
+  dependencies:
+    "@material/base" "^0.41.0"
+    "@material/list" "^0.42.0"
+    "@material/menu-surface" "^0.42.1"
+    "@material/ripple" "^0.42.0"
+    "@material/rtl" "^0.42.0"
+
+"@material/ripple@^0.42.0":
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.42.0.tgz#3ff501badfb81c76b1e51e6790217c2f32b57cdc"
+  dependencies:
+    "@material/animation" "^0.41.0"
+    "@material/base" "^0.41.0"
+    "@material/theme" "^0.41.0"
+
+"@material/rtl@^0.42.0":
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.42.0.tgz#1836e78186c2d8b996f6fbf97adab203535335bc"
+
+"@material/shape@^0.42.0":
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/@material/shape/-/shape-0.42.0.tgz#784e117401ac5fe5f49411c34c86e62accb0f534"
+
+"@material/theme@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.41.0.tgz#4f8252a872b17845cc661b867cbbf54e51a26759"
+
+"@material/typography@^0.42.0":
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/@material/typography/-/typography-0.42.0.tgz#ccb36c18bd1c8911c207872e575fafc845309162"
 
 "@ngtools/webpack@7.1.4":
   version "7.1.4"
@@ -2640,6 +2740,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2:
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
 
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+
 handle-thing@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-1.2.5.tgz#fd7aad726bf1a5fd16dfc29b2f7a6601d27139c4"
@@ -4523,6 +4627,10 @@ parse5@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
 
+parse5@^5.0.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
+
 parseqs@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/parseqs/-/parseqs-0.0.5.tgz#d5208a3738e46766e291ba2ea173684921a8b89d"
@@ -6016,7 +6124,7 @@ ts-node@~7.0.0:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
